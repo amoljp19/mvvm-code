@@ -23,7 +23,7 @@ public class ArticleApiResponseTest {
     public void testAPI() throws InterruptedException {
         countDownLatch = new CountDownLatch(1);
         ApiResponseManager apiResponseManager = new ApiResponseManager();
-        apiResponseManager.getArticles("7", new ApiResponseManager.ApiCallback<ApiResponse>() {
+        apiResponseManager.getArticles("30", new ApiResponseManager.ApiCallback<ApiResponse>() {
             @Override
             public void success(ApiResponse response) {
                 if (countDownLatch != null)
