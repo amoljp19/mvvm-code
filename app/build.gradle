@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'jacoco-android'
+
 
 android {
     compileSdkVersion 28
@@ -11,12 +13,48 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        debuge{
+            testCoverageEnabled = true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
+    }
 }
+
+
+
+tasks.withType(Test) {
+    enabled = System.getProperty("java.specification.version") != "9"
+//    append = true
+    jacoco.includeNoLocationClasses = true
+    //jacoco.excludes = ['jdk.internal.*']
+}
+
+jacoco {
+    toolVersion = "0.8.3"
+}
+
+// TODO: Setup jacoco report format. We need xml for Sonarqube
+
+jacocoAndroidUnitTestReport {
+    csv.enabled false
+    html.enabled true
+    xml.enabled true
+}
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -27,4 +65,28 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+}
+
+sonarqube {
+    properties {
+        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-28/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
+
+        property "sonar.projectKey", "MvvmCode"
+        property "sonar.projectName", "MvvmCode"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.exclusions", "robospice/**/*"
+        property "sonar.host.url", "http://192.168.0.1:9000" // TODO: - Setup your Sonarqube server address
+        property "sonar.login", "2c65a11f523902700249d65fcafd6591de9a2287"
+        property "sonar.sources", "src/main/java"
+        property "sonar.binaries", "build/intermediates/app_classes/debug"
+        property "sonar.libraries", libraries
+        property "sonar.tests", "src/test/java, src/androidTest/java"
+        property "sonar.java.test.binaries", "build/intermediates/app_classes/debug"
+        property "sonar.java.test.libraries", libraries
+        property "sonar.jacoco.reportPaths", "build/jacoco/testDebugUnitTest.exec"
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.junit.reportsPaths", "build/test-results/debug"
+        property "sonar.android.lint.report", "build/outputs/lint-results"
+    }
+
 }
