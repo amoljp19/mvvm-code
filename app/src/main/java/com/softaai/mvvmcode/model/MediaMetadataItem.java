@@ -3,7 +3,9 @@ package com.softaai.mvvmcode.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class MediaMetadataItem {
+import java.io.Serializable;
+
+public class MediaMetadataItem implements Serializable {
 
     @SerializedName("url")
     @Expose

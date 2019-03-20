@@ -46,7 +46,7 @@ public class ArticleItemViewModel  extends ViewModel {
     }
 
     public void onItemClick(View view) {
-        //context.startActivity(ArticleDetailActivity.launchDetail(view.getContext()));
+        context.startActivity(ArticleDetailActivity.launchDetail(view.getContext(), results));
     }
 
 
