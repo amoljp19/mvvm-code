@@ -60,6 +60,16 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
         }
     }
 
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
     public void setArticleList(List<Results> articleList) {
         this.articleList = articleList;
         notifyDataSetChanged();
@@ -73,7 +83,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
         ArticleItemBinding mArticleItemBinding;
 
         ArticleItemAdapterViewHolder(ArticleItemBinding mArticleItemBinding) {
-            super(mArticleItemBinding.getRoot().getRootView());
+            super(mArticleItemBinding.itemArticle);
             this.mArticleItemBinding = mArticleItemBinding;
         }
 
