@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
           <value>
             <set />
@@ -149,6 +154,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/ArticleApiResponseTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/model/FakeApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/model/MockResults.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/viewmodel/ArticleItemViewModelTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/viewmodel/MockView.java">
           <value>
             <set />
           </value>

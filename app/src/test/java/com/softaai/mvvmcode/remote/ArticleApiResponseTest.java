@@ -1,4 +1,4 @@
-package com.softaai.mvvmcode;
+package com.softaai.mvvmcode.remote;
 
 import com.softaai.mvvmcode.model.ArticleResponse;
 import com.softaai.mvvmcode.remote.ApiResponseManager;
