@@ -173,6 +173,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/viewmodel/MainListViewModelTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/test/java/com/softaai/mvvmcode/viewmodel/MockView.java">
           <value>
             <set />
