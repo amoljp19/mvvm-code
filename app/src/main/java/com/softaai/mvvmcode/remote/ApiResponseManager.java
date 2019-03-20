@@ -1,6 +1,6 @@
 package com.softaai.mvvmcode.remote;
 
-import com.softaai.mvvmcode.model.ApiResponse;
+import com.softaai.mvvmcode.model.ArticleResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,11 +23,11 @@ public class ApiResponseManager {
     }
 
 
-    public void getArticles(String period,final ApiCallback<ApiResponse> callback) {
+    public void getArticles(String period,final ApiCallback<ArticleResponse> callback) {
         ArticleApi services = client.create(ArticleApi.class);
-        services.getAllArticles(period, apiKey).enqueue(new Callback<ApiResponse>() {
+        services.getAllArticles(period, apiKey).enqueue(new Callback<ArticleResponse>() {
             @Override
-            public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+            public void onResponse(Call<ArticleResponse> call, Response<ArticleResponse> response) {
                 if (response.isSuccessful()) {
                     callback.success(response.body());
                 } else {
@@ -36,7 +36,7 @@ public class ApiResponseManager {
             }
 
             @Override
-            public void onFailure(Call<ApiResponse> call, Throwable t) {
+            public void onFailure(Call<ArticleResponse> call, Throwable t) {
                 callback.failure(500);
             }
         });

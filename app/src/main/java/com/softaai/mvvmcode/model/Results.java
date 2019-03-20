@@ -1,53 +1,66 @@
 package com.softaai.mvvmcode.model;
 
-import com.squareup.moshi.Json;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * Created by Amol Pawar on 20-03-2019.
- * softAai Apps
- */
 public class Results {
 
-    @Json(name = "url")
+    @SerializedName("url")
+    @Expose
     private String url;
-    @Json(name = "adx_keywords")
+    @SerializedName("adx_keywords")
+    @Expose
     private String adxKeywords;
-    @Json(name = "column")
+    @SerializedName("column")
+    @Expose
     private String column;
-    @Json(name = "section")
+    @SerializedName("section")
+    @Expose
     private String section;
-    @Json(name = "byline")
+    @SerializedName("byline")
+    @Expose
     private String byline;
-    @Json(name = "type")
+    @SerializedName("type")
+    @Expose
     private String type;
-    @Json(name = "title")
+    @SerializedName("title")
+    @Expose
     private String title;
-    @Json(name = "abstract")
+    @SerializedName("abstract")
+    @Expose
     private String _abstract;
-    @Json(name = "published_date")
+    @SerializedName("published_date")
+    @Expose
     private String publishedDate;
-    @Json(name = "source")
+    @SerializedName("source")
+    @Expose
     private String source;
-    @Json(name = "id")
-    private Integer id;
-    @Json(name = "asset_id")
-    private Integer assetId;
-    @Json(name = "views")
+    @SerializedName("id")
+    @Expose
+    private Double id;
+    @SerializedName("asset_id")
+    @Expose
+    private Double assetId;
+    @SerializedName("views")
+    @Expose
     private Integer views;
-    @Json(name = "des_facet")
-    private List<String> desFacet = null;
-    @Json(name = "org_facet")
-    private List<String> orgFacet = null;
-    @Json(name = "per_facet")
-    private String perFacet;
-    @Json(name = "geo_facet")
-    private String geoFacet;
-    @Json(name = "media")
+    @SerializedName("des_facet")
+    @Expose
+    private Object desFacet = null;
+    @SerializedName("org_facet")
+    @Expose
+    private Object orgFacet = null;
+    @SerializedName("per_facet")
+    @Expose
+    private Object perFacet = null;
+    @SerializedName("geo_facet")
+    @Expose
+    private Object geoFacet = null;
+    @SerializedName("media")
+    @Expose
     private List<MediaItem> media = null;
-    @Json(name = "uri")
-    private String uri;
 
     public String getUrl() {
         return url;
@@ -65,7 +78,7 @@ public class Results {
         this.adxKeywords = adxKeywords;
     }
 
-    public String getColumn() {
+    public Object getColumn() {
         return column;
     }
 
@@ -129,19 +142,19 @@ public class Results {
         this.source = source;
     }
 
-    public Integer getId() {
+    public Double getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Double id) {
         this.id = id;
     }
 
-    public Integer getAssetId() {
+    public Double getAssetId() {
         return assetId;
     }
 
-    public void setAssetId(Integer assetId) {
+    public void setAssetId(Double assetId) {
         this.assetId = assetId;
     }
 
@@ -153,35 +166,35 @@ public class Results {
         this.views = views;
     }
 
-    public List<String> getDesFacet() {
+    public Object getDesFacet() {
         return desFacet;
     }
 
-    public void setDesFacet(List<String> desFacet) {
+    public void setDesFacet(Object desFacet) {
         this.desFacet = desFacet;
     }
 
-    public List<String> getOrgFacet() {
+    public Object getOrgFacet() {
         return orgFacet;
     }
 
-    public void setOrgFacet(List<String> orgFacet) {
+    public void setOrgFacet(Object orgFacet) {
         this.orgFacet = orgFacet;
     }
 
-    public String getPerFacet() {
+    public Object getPerFacet() {
         return perFacet;
     }
 
-    public void setPerFacet(String perFacet) {
+    public void setPerFacet(Object perFacet) {
         this.perFacet = perFacet;
     }
 
-    public String getGeoFacet() {
+    public Object getGeoFacet() {
         return geoFacet;
     }
 
-    public void setGeoFacet(String geoFacet) {
+    public void setGeoFacet(Object geoFacet) {
         this.geoFacet = geoFacet;
     }
 
@@ -191,14 +204,6 @@ public class Results {
 
     public void setMedia(List<MediaItem> media) {
         this.media = media;
-    }
-
-    public String getUri() {
-        return uri;
-    }
-
-    public void setUri(String uri) {
-        this.uri = uri;
     }
 
 }

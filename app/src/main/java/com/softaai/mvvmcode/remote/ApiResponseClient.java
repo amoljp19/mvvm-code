@@ -7,7 +7,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.moshi.MoshiConverterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Amol Pawar on 20-03-2019.
@@ -41,7 +41,7 @@ public class ApiResponseClient {
 
             retrofit = new Retrofit.Builder()
                     .baseUrl(url)
-                    .addConverterFactory(MoshiConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();
         }

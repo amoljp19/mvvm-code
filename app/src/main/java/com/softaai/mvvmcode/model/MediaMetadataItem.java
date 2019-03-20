@@ -1,20 +1,21 @@
 package com.softaai.mvvmcode.model;
 
-import com.squareup.moshi.Json;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Amol Pawar on 20-03-2019.
- * softAai Apps
- */
 public class MediaMetadataItem {
 
-    @Json(name = "url")
+    @SerializedName("url")
+    @Expose
     private String url;
-    @Json(name = "format")
+    @SerializedName("format")
+    @Expose
     private String format;
-    @Json(name = "height")
+    @SerializedName("height")
+    @Expose
     private Integer height;
-    @Json(name = "width")
+    @SerializedName("width")
+    @Expose
     private Integer width;
 
     public String getUrl() {

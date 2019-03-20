@@ -1,22 +1,22 @@
 package com.softaai.mvvmcode.model;
 
-import com.squareup.moshi.Json;
-
 import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Amol Pawar on 20-03-2019.
- * softAai Apps
- */
-public class ApiResponse {
+public class ArticleResponse {
 
-    @Json(name = "status")
+    @SerializedName("status")
+    @Expose
     private String status;
-    @Json(name = "copyright")
+    @SerializedName("copyright")
+    @Expose
     private String copyright;
-    @Json(name = "num_results")
+    @SerializedName("num_results")
+    @Expose
     private Integer numResults;
-    @Json(name = "results")
+    @SerializedName("results")
+    @Expose
     private List<Results> results = null;
 
     public String getStatus() {

@@ -1,6 +1,6 @@
 package com.softaai.mvvmcode;
 
-import com.softaai.mvvmcode.model.ApiResponse;
+import com.softaai.mvvmcode.model.ArticleResponse;
 import com.softaai.mvvmcode.remote.ApiResponseManager;
 
 import org.junit.Test;
@@ -23,9 +23,9 @@ public class ArticleApiResponseTest {
     public void testAPI() throws InterruptedException {
         countDownLatch = new CountDownLatch(1);
         ApiResponseManager apiResponseManager = new ApiResponseManager();
-        apiResponseManager.getArticles("30", new ApiResponseManager.ApiCallback<ApiResponse>() {
+        apiResponseManager.getArticles("30", new ApiResponseManager.ApiCallback<ArticleResponse>() {
             @Override
-            public void success(ApiResponse response) {
+            public void success(ArticleResponse response) {
                 if (countDownLatch != null)
                     countDownLatch.countDown();
 

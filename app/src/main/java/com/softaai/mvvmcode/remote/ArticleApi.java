@@ -1,6 +1,6 @@
 package com.softaai.mvvmcode.remote;
 
-import com.softaai.mvvmcode.model.ApiResponse;
+import com.softaai.mvvmcode.model.ArticleResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -14,5 +14,5 @@ import retrofit2.http.Query;
 public interface ArticleApi {
 
     @GET("svc/mostpopular/v2/mostviewed/all-sections/{period}.json?}")
-    Call<ApiResponse> getAllArticles(@Path("period") String period, @Query(value = "api-key", encoded = true) String apiKey);
+    Call<ArticleResponse> getAllArticles(@Path("period") String period, @Query(value = "api-key", encoded = true) String apiKey);
 }

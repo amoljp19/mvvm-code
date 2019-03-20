@@ -1,26 +1,28 @@
 package com.softaai.mvvmcode.model;
 
-import com.squareup.moshi.Json;
-
 import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Amol Pawar on 20-03-2019.
- * softAai Apps
- */
 public class MediaItem {
 
-    @Json(name = "type")
+    @SerializedName("type")
+    @Expose
     private String type;
-    @Json(name = "subtype")
+    @SerializedName("subtype")
+    @Expose
     private String subtype;
-    @Json(name = "caption")
+    @SerializedName("caption")
+    @Expose
     private String caption;
-    @Json(name = "copyright")
+    @SerializedName("copyright")
+    @Expose
     private String copyright;
-    @Json(name = "approved_for_syndication")
+    @SerializedName("approved_for_syndication")
+    @Expose
     private Integer approvedForSyndication;
-    @Json(name = "media-metadata")
+    @SerializedName("media-metadata")
+    @Expose
     private List<MediaMetadataItem> mediaMetadata = null;
 
     public String getType() {
@@ -72,4 +74,3 @@ public class MediaItem {
     }
 
 }
-
