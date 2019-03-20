@@ -1,18 +1,10 @@
 
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-n
->app/src/main/java/com/softaai/mvvmcode/dummy/DummyContent.java,3\c\3c7d50de8603d8b289cb87cbdfb2d749491bdbb7
 k
 ;app/src/test/java/com/softaai/mvvmcode/ExampleUnitTest.java,9\a\9aaf1697eb34fee91c41ff92ee3e6008e5bcaea9
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-n
->app/src/main/java/com/softaai/mvvmcode/ItemDetailActivity.java,1\7\178ac0dee1e08b64f9371de8e6fe55472aaac3b2
-n
->app/src/main/java/com/softaai/mvvmcode/ItemDetailFragment.java,a\0\a06ea5cb5e3969e77d6171bfb2ac69bfcc80887f
-l
-<app/src/main/java/com/softaai/mvvmcode/ItemListActivity.java,0\1\01b8334e9a22b0e6d1169b9397c762557c89c55d
 m
 =app/src/main/java/com/softaai/mvvmcode/remote/ArticleApi.java,2\a\2a392dd2682f459ea77b2909ed1027512244a829
 r
@@ -21,8 +13,6 @@ Bapp/src/test/java/com/softaai/mvvmcode/ArticleApiResponseTest.java,2\b\2bca750
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 Z
 *app/src/main/res/layout/article_detail.xml,9\8\98abb5dccbf4c248f07d62109b4e3dbdcb364f5a
-|
-Lapp/src/main/java/com/softaai/mvvmcode/viewmodel/ArticleDetailViewModel.java,0\2\02fe1efc48917b93394f6e2555cac239f935bc31
 z
 Japp/src/main/java/com/softaai/mvvmcode/viewmodel/ArticleItemViewModel.java,6\c\6cd34b1c24894bdd1f5122e8a00c8e79fe23b9ff
 w

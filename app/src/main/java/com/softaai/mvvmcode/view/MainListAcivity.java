@@ -42,7 +42,8 @@ public class MainListAcivity extends AppCompatActivity {
 
     private void initDataBinding() {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        mainListViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
+        //mainListViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
+        mainListViewModel = new MainListViewModel();
         activityMainBinding.setMainListViewModel(mainListViewModel);
     }
 

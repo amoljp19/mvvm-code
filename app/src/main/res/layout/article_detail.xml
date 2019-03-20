@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <import type="java.lang.String" />
 
         <variable
-            name="article"
-            type="com.softaai.mvvmcode.model.Results" />
+            name="articleDetailViewModel"
+            type="com.softaai.mvvmcode.viewmodel.ArticleDetailViewModel" />
 
     </data>
 
@@ -27,7 +28,8 @@
                 android:id="@+id/iv_article_image"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                tools:imageUrl="@{articleDetailViewModel.url}"/>
 
 
             <TextView
@@ -37,7 +39,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
-                android:text="@{article.title}"
+                android:text="@{articleDetailViewModel.title}"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:textSize="18sp" />
@@ -50,7 +52,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Published ` + article.byline}"
+                android:text="@{`Published ` + articleDetailViewModel.byline}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -62,7 +64,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Publised Date  : ` + article.publishedDate}"
+                android:text="@{`Publised Date  : ` + articleDetailViewModel.publishedDate}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -74,7 +76,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`No of Views: ` + String.valueOf(article.views)}"
+                android:text="@{`No of Views: ` + String.valueOf(articleDetailViewModel.views)}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -85,7 +87,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Source : ` + String.valueOf(article.source)}"
+                android:text="@{`Source : ` + articleDetailViewModel.source}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -96,19 +98,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Section : ` + String.valueOf(article.section)}"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="sans-serif"
-                android:text="@{`Abstract : ` + String.valueOf(article.abstract)}"
+                android:text="@{`Section : ` + articleDetailViewModel.section}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -120,7 +110,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Keywords : ` + String.valueOf(article.adxKeywords)}"
+                android:text="@{`Abstract : ` + articleDetailViewModel.abstract}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -132,7 +122,19 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="sans-serif"
-                android:text="@{`Article Type : ` + String.valueOf(article.type)}"
+                android:text="@{`Keywords : ` + articleDetailViewModel.adxKeywords}"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:text="@{`Article Type : ` + articleDetailViewModel.type}"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 

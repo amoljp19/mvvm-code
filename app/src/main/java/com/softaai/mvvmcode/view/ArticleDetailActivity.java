@@ -9,6 +9,7 @@ import com.softaai.mvvmcode.R;
 import com.softaai.mvvmcode.databinding.ArticleDetailBinding;
 import com.softaai.mvvmcode.model.ArticleResponse;
 import com.softaai.mvvmcode.model.Results;
+import com.softaai.mvvmcode.viewmodel.ArticleDetailViewModel;
 
 import java.io.Serializable;
 
@@ -24,6 +25,8 @@ public class ArticleDetailActivity extends AppCompatActivity {
     private static final String EXTRA_ARTICLE = "EXTRA_ARTICLE";
 
     private ArticleDetailBinding articleDetailBinding;
+
+    private ArticleDetailViewModel articleDetailViewModel;
 
 
     @Override
@@ -44,8 +47,10 @@ public class ArticleDetailActivity extends AppCompatActivity {
 
     private void getExtrasFromIntent() {
         Results results = (Results) getIntent().getSerializableExtra(EXTRA_ARTICLE);
-        articleDetailBinding.setArticle(results);
+        articleDetailViewModel = new ArticleDetailViewModel(results);
+        articleDetailBinding.setArticleDetailViewModel(articleDetailViewModel);
         setTitle(results.getTitle());
+
     }
 
 

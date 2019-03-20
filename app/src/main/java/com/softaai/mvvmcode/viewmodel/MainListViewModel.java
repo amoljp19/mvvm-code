@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModel;
  * Created by Amol Pawar on 20-03-2019.
  * softAai Apps
  */
-public class MainListViewModel extends AndroidViewModel {
+public class MainListViewModel extends ViewModel {
 
     public ObservableInt articleProgress;
     public ObservableInt articleRecycler;
@@ -29,8 +29,7 @@ public class MainListViewModel extends AndroidViewModel {
     private Context context;
     ApiResponseManager apiResponseManager;
 
-    public MainListViewModel(Application application){
-        super(application);
+    public MainListViewModel(){
         articleProgress = new ObservableInt(View.VISIBLE);
         articleRecycler = new ObservableInt(View.VISIBLE);
         articleList = getArticles();

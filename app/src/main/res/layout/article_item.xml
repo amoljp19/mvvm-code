@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="articleItemViewModel"
@@ -21,6 +22,7 @@
             android:layout_centerVertical="true"
             app:civ_border_color="@color/colorPrimary"
             app:civ_border_width="1dp"
+            tools:imageUrl="@{articleItemViewModel.url}"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp" />
 
