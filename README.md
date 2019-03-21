@@ -12,6 +12,9 @@ Android MVVM
 * Which will generate the apk and will be installed on the connected device
 
 
+### Run All Local Unit Tests Located at app/src/test/java/ with Code Coverage
+
+
 ### SonarQube server installation
 * Download SonarQube here -> https://www.sonarqube.org/downloads/.
 * Extract your sonarqube-{version}.zip
