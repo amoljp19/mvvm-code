@@ -13,7 +13,7 @@ Android MVVM
 
 
 ### SonarQube server installation
-* Download SonarQube here.
+* Download SonarQube here -> https://www.sonarqube.org/downloads/.
 * Extract your sonarqube-{version}.zip
 * Inside $SONAR_DOWNLOAD_DIR/sonarqube-{version}/bin you can see all the SO distributions:
 * Run sonar.sh file manually
