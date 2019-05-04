@@ -25,9 +25,8 @@ public class ArticleItemViewModel  extends ViewModel {
 
     public Results results;
 
-    public ArticleItemViewModel(Results results/*, Context context*/) {
+    public ArticleItemViewModel(Results results) {
           this.results = results;
-//          this.context = context;
     }
 
 

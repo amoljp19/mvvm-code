@@ -2,6 +2,9 @@ package com.softaai.mvvmcode.viewmodel;
 
 import android.view.View;
 
+import com.softaai.mvvmcode.di.MvvmCodeApp;
+import com.softaai.mvvmcode.view.MainListAcivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,7 +32,7 @@ public class MainListViewModelTest {
     @Before
     public void setUpMainViewModelTest() {
         //mainListViewModel = new MainListViewModel();
-        MvvmCodeApp.getComponent().inject(mainListViewModel);
+        MvvmCodeApp.getComponent().inject(new MainListAcivity());
     }
 
     @Test

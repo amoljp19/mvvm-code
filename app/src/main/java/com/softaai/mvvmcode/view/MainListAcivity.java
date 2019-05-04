@@ -30,7 +30,9 @@ public class MainListAcivity extends AppCompatActivity {
     private ActivityMainBinding activityMainBinding;
     @Inject
     public MainListViewModel mainListViewModel;
-    ArticleItemAdapter adapter;
+
+    @Inject
+    public ArticleItemAdapter adapter;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +55,7 @@ public class MainListAcivity extends AppCompatActivity {
     private void setupMainListView(RecyclerView listArticle) {
 
         listArticle.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ArticleItemAdapter();
+        //adapter = new ArticleItemAdapter();
         adapter.setArticleList(mainListViewModel.getArticles().getValue());
         listArticle.setAdapter(adapter);
 
