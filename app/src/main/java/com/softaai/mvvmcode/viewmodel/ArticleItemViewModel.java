@@ -23,8 +23,8 @@ import javax.inject.Inject;
  */
 public class ArticleItemViewModel  extends ViewModel {
 
-    private Results results;
-    @Inject
+    public Results results;
+
     public ArticleItemViewModel(Results results/*, Context context*/) {
           this.results = results;
 //          this.context = context;

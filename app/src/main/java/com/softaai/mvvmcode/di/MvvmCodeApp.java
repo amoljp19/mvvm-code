@@ -7,6 +7,7 @@ import com.softaai.mvvmcode.di.Component.DaggerAppComponent;
 import com.softaai.mvvmcode.di.module.ArticleDetailActivityModule;
 import com.softaai.mvvmcode.di.module.MainListActivityModule;
 import com.softaai.mvvmcode.di.module.NetworkModule;
+import com.softaai.mvvmcode.model.Results;
 
 /**
  * Created by Amol Pawar on 04-05-2019.
@@ -30,7 +31,7 @@ public class MvvmCodeApp extends Application {
 
     protected AppComponent buildComponent(){
         return DaggerAppComponent.builder()
-                .articleDetailActivityModule(new ArticleDetailActivityModule())
+                .articleDetailActivityModule(new ArticleDetailActivityModule(new Results()))
                 .mainListActivityModule(new MainListActivityModule())
                 .networkModule(new NetworkModule(url))
                 .build();

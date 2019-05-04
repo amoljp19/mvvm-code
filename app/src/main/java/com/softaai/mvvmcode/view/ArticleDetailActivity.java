@@ -6,7 +6,11 @@ import android.os.Bundle;
 
 import com.softaai.mvvmcode.R;
 import com.softaai.mvvmcode.databinding.ArticleDetailBinding;
+import com.softaai.mvvmcode.di.Component.AppComponent;
+import com.softaai.mvvmcode.di.Component.DaggerAppComponent;
 import com.softaai.mvvmcode.di.MvvmCodeApp;
+import com.softaai.mvvmcode.di.module.ArticleDetailActivityModule;
+import com.softaai.mvvmcode.di.module.NetworkModule;
 import com.softaai.mvvmcode.model.Results;
 import com.softaai.mvvmcode.viewmodel.ArticleDetailViewModel;
 
@@ -28,7 +32,6 @@ public class ArticleDetailActivity extends AppCompatActivity {
     @Inject
     public ArticleDetailViewModel articleDetailViewModel;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +50,19 @@ public class ArticleDetailActivity extends AppCompatActivity {
 
     private void getExtrasFromIntent() {
         Results results = (Results) getIntent().getSerializableExtra(EXTRA_ARTICLE);
-//        articleDetailViewModel = new ArticleDetailViewModel(results);
-        MvvmCodeApp.getComponent().inject(this);
+        //articleDetailViewModel = new ArticleDetailViewModel(results);
+        AppComponent mAppComponent = DaggerAppComponent.builder()
+                .articleDetailActivityModule(new ArticleDetailActivityModule(results))
+                .networkModule(new NetworkModule(""))
+                .build();
+        mAppComponent.inject(this);
+
         articleDetailBinding.setArticleDetailViewModel(articleDetailViewModel);
         setTitle(results.getTitle());
 
     }
+
+
 
 
 }

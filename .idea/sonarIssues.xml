@@ -38,6 +38,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/softaai/mvvmcode/databinding/ArticleDetailBindingImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/softaai/mvvmcode/di/Component/DaggerAppComponent.java">
           <value>
             <set />

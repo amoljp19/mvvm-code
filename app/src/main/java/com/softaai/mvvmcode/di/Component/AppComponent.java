@@ -3,6 +3,7 @@ package com.softaai.mvvmcode.di.Component;
 import com.softaai.mvvmcode.di.module.ArticleDetailActivityModule;
 import com.softaai.mvvmcode.di.module.MainListActivityModule;
 import com.softaai.mvvmcode.di.module.NetworkModule;
+import com.softaai.mvvmcode.model.Results;
 import com.softaai.mvvmcode.remote.ApiResponseManager;
 import com.softaai.mvvmcode.view.ArticleDetailActivity;
 import com.softaai.mvvmcode.view.MainListAcivity;
@@ -26,4 +27,5 @@ public interface AppComponent {
     void inject(MainListAcivity mainActivity);
     void inject(ArticleDetailActivity articleDetailActivity);
     void inject(ApiResponseManager apiResponseManager);
+
 }

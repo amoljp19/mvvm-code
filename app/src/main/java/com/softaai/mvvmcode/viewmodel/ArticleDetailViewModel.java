@@ -10,14 +10,17 @@ import com.squareup.picasso.Picasso;
 import androidx.databinding.BindingAdapter;
 import androidx.lifecycle.ViewModel;
 
+import javax.inject.Inject;
+
 /**
  * Created by Amol Pawar on 21-03-2019.
  * softAai Apps
  */
-public class ArticleDetailViewModel  extends ViewModel {
+public class ArticleDetailViewModel  extends ViewModel{
 
-    private Results results;
+    public Results results;
 
+    @Inject
     public ArticleDetailViewModel(Results results) {
         this.results = results;
     }

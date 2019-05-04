@@ -4,6 +4,7 @@ import androidx.transition.Visibility;
 
 import com.softaai.mvvmcode.model.Results;
 import com.softaai.mvvmcode.viewmodel.ArticleDetailViewModel;
+import com.softaai.mvvmcode.viewmodel.ArticleItemViewModel;
 import com.softaai.mvvmcode.viewmodel.MainListViewModel;
 
 import javax.inject.Singleton;
@@ -19,18 +20,16 @@ import dagger.Provides;
 @Module
 public class ArticleDetailActivityModule {
 
+    Results results;
 
-    @Provides
-    @Singleton
-    Results provideResults(){
-        return new Results();
+    public ArticleDetailActivityModule(Results results){
+        this.results = results;
     }
 
     @Provides
     @Singleton
-    ArticleDetailViewModel provideArticleDetailViewModel(Results results){
+    ArticleDetailViewModel provideArticleDetailViewModel(){
         return new ArticleDetailViewModel(results);
     }
-
 
 }
