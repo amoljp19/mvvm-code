@@ -66,7 +66,7 @@ public class ArticleItemViewModelTest {
     }
 
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void shouldStartArticleDetailActivityOnItemClick() throws Exception {
         articleItemViewModel.onItemClick(new MockView(mockContext));
         verify(mockContext).startActivity(any(Intent.class));
