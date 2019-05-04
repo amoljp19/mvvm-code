@@ -15,6 +15,8 @@ import com.squareup.picasso.Picasso;
 import androidx.databinding.BindingAdapter;
 import androidx.lifecycle.ViewModel;
 
+import javax.inject.Inject;
+
 /**
  * Created by Amol Pawar on 20-03-2019.
  * softAai Apps
@@ -22,11 +24,10 @@ import androidx.lifecycle.ViewModel;
 public class ArticleItemViewModel  extends ViewModel {
 
     private Results results;
-    private Context context;
-
-    public ArticleItemViewModel(Results results, Context context) {
+    @Inject
+    public ArticleItemViewModel(Results results/*, Context context*/) {
           this.results = results;
-          this.context = context;
+//          this.context = context;
     }
 
 
@@ -53,7 +54,7 @@ public class ArticleItemViewModel  extends ViewModel {
     }
 
     public void onItemClick(View view) {
-        context.startActivity(ArticleDetailActivity.launchDetail(view.getContext(), results));
+        view.getContext().startActivity(ArticleDetailActivity.launchDetail(view.getContext(), results));
     }
 
 

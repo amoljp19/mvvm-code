@@ -90,7 +90,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
         public void bindArticleResponse(Results results) {
             if (mArticleItemBinding.getArticleItemViewModel() == null) {
                 mArticleItemBinding.setArticleItemViewModel(
-                        new ArticleItemViewModel(results, itemView.getContext()));
+                        new ArticleItemViewModel(results));
             } else {
                 mArticleItemBinding.getArticleItemViewModel().setArticleResponse(results);
             }

@@ -7,8 +7,6 @@ k
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 m
 =app/src/main/java/com/softaai/mvvmcode/remote/ArticleApi.java,2\a\2a392dd2682f459ea77b2909ed1027512244a829
-r
-Bapp/src/test/java/com/softaai/mvvmcode/ArticleApiResponseTest.java,2\b\2bca7502c90ce77941e4f9e4d9bbb65a5bbe1c76
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 Z
@@ -35,3 +33,21 @@ p
 @app/src/main/java/com/softaai/mvvmcode/view/MainListAcivity.java,2\0\20564fbf90711690ffbc29f32a7b15e22d014ebc
 v
 Fapp/src/main/java/com/softaai/mvvmcode/view/ArticleDetailActivity.java,7\d\7d4c1cb18b2a62518950184b604476289e704f99
+|
+Lapp/src/main/java/com/softaai/mvvmcode/viewmodel/ArticleDetailViewModel.java,0\2\02fe1efc48917b93394f6e2555cac239f935bc31
+u
+Eapp/src/main/java/com/softaai/mvvmcode/di/Component/AppComponent.java,3\8\389f1618c2ba1139c4b0276cd1d6810be530c6a3
+s
+Capp/src/main/java/com/softaai/mvvmcode/di/module/NetworkModule.java,4\b\4b2f956fdcdac6abe304c1daa41ba585a8ea1900
+~
+Napp/src/test/java/com/softaai/mvvmcode/viewmodel/ArticleItemViewModelTest.java,a\7\a7ee01d2cbdbb49ce70480719bd0957de48b2980
+{
+Kapp/src/test/java/com/softaai/mvvmcode/viewmodel/MainListViewModelTest.java,2\5\25b73c223296f8a01009cc4c3e70e0890b1626a1
+|
+Lapp/src/main/java/com/softaai/mvvmcode/di/module/MainListActivityModule.java,a\a\aa4997fcf533f4c17e82652debd6ae38c7ba1644
+Å
+Qapp/src/main/java/com/softaai/mvvmcode/di/module/ArticleDetailActivityModule.java,b\1\b1ffae719e1a908ad6242e9deaab23fd3ae40697
+Ä
+Papp/src/test/java/com/softaai/mvvmcode/viewmodel/ArticleDetailViewModelTest.java,f\f\ff85b2b88a320aeb98849b8a9572dd2de4245796
+j
+:app/src/main/java/com/softaai/mvvmcode/di/MvvmCodeApp.java,1\5\15a833417bdb56df4caa8854f86c3b2a350333e5

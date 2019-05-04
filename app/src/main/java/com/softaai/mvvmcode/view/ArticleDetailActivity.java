@@ -3,18 +3,17 @@ package com.softaai.mvvmcode.view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 
 import com.softaai.mvvmcode.R;
 import com.softaai.mvvmcode.databinding.ArticleDetailBinding;
-import com.softaai.mvvmcode.model.ArticleResponse;
+import com.softaai.mvvmcode.di.MvvmCodeApp;
 import com.softaai.mvvmcode.model.Results;
 import com.softaai.mvvmcode.viewmodel.ArticleDetailViewModel;
 
-import java.io.Serializable;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+
+import javax.inject.Inject;
 
 /**
  * Created by Amol Pawar on 20-03-2019.
@@ -26,7 +25,8 @@ public class ArticleDetailActivity extends AppCompatActivity {
 
     private ArticleDetailBinding articleDetailBinding;
 
-    private ArticleDetailViewModel articleDetailViewModel;
+    @Inject
+    public ArticleDetailViewModel articleDetailViewModel;
 
 
     @Override
@@ -47,7 +47,8 @@ public class ArticleDetailActivity extends AppCompatActivity {
 
     private void getExtrasFromIntent() {
         Results results = (Results) getIntent().getSerializableExtra(EXTRA_ARTICLE);
-        articleDetailViewModel = new ArticleDetailViewModel(results);
+//        articleDetailViewModel = new ArticleDetailViewModel(results);
+        MvvmCodeApp.getComponent().inject(this);
         articleDetailBinding.setArticleDetailViewModel(articleDetailViewModel);
         setTitle(results.getTitle());
 

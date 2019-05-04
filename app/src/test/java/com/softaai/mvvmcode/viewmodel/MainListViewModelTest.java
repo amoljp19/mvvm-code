@@ -1,12 +1,6 @@
 package com.softaai.mvvmcode.viewmodel;
 
-import android.content.Context;
 import android.view.View;
-
-import com.softaai.mvvmcode.model.ArticleResponse;
-import com.softaai.mvvmcode.model.FakeApi;
-import com.softaai.mvvmcode.model.Results;
-import com.softaai.mvvmcode.remote.ApiResponseManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,9 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.List;
-
-import io.reactivex.Observable;
+import javax.inject.Inject;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -30,12 +22,14 @@ import static org.mockito.Mockito.mock;
 @RunWith(MockitoJUnitRunner.class)
 public class MainListViewModelTest {
 
+    @Inject
     @Mock
     private MainListViewModel mainListViewModel;
 
     @Before
     public void setUpMainViewModelTest() {
-        mainListViewModel = new MainListViewModel();
+        //mainListViewModel = new MainListViewModel();
+        MvvmCodeApp.getComponent().inject(mainListViewModel);
     }
 
     @Test

@@ -1,3 +1,3 @@
 
-~squid:S1450"`Remove the "mainListViewModel" field and declare it as a local variable in the relevant methods.(úÎ÷Ø8¥´®Ä™-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(—¼ºþÿÿÿÿ8ïìºÄ™-
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(è‘±Òýÿÿÿÿ8ê°öä™-
+csquid:UselessImportCheck"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8×âÜ¨-

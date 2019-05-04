@@ -16,6 +16,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import javax.inject.Inject;
+
 /**
  * Created by Amol Pawar on 20-03-2019.
  * softAai Apps
@@ -26,7 +28,6 @@ public class MainListViewModel extends ViewModel {
     public ObservableInt articleRecycler;
 
     private MutableLiveData<List<Results>> articleList;
-    private Context context;
     ApiResponseManager apiResponseManager;
 
     public MainListViewModel(){

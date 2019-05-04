@@ -4,7 +4,7 @@
 
     <data>
 
-        <import type="java.lang.String" />
+        <!--<import type="java.lang.String"/>-->
 
         <variable
             name="articleDetailViewModel"

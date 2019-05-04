@@ -41,7 +41,7 @@ public class ArticleItemViewModelTest {
     public void initMocks() {
         mockContext = mock(Context.class);
         results = new Results();
-        articleItemViewModel = new ArticleItemViewModel(results, mockContext);
+        articleItemViewModel = new ArticleItemViewModel(results);
     }
 
     @Test

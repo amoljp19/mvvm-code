@@ -1,25 +1,27 @@
 package com.softaai.mvvmcode.remote;
 
+import com.softaai.mvvmcode.di.MvvmCodeApp;
 import com.softaai.mvvmcode.model.ArticleResponse;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-import static com.softaai.mvvmcode.remote.ApiResponseClient.getClient;
-
 /**
  * Created by Amol Pawar on 20-03-2019.
  * softAai Apps
  */
 public class ApiResponseManager {
-
-    private final Retrofit client;
+    @Inject
+    public Retrofit client;
     private final String apiKey = "0fFXSxFu3GYAZIMTd6bPJaXZs2QNAcRp";
 
     public ApiResponseManager() {
-        client = getClient();
+       // client = getClient();
+        MvvmCodeApp.getComponent().inject(this);
     }
 
 

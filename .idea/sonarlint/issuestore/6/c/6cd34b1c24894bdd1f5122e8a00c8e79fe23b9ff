@@ -1,2 +1,7 @@
 
-¤squid:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•íÖ¢þÿÿÿÿ8îò…Æ™-
+]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8òÝíã™-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ôöÙŸúÿÿÿÿ8¡•–Ž¨-
+nsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(»Ëœãÿÿÿÿÿ8”œ„ä™-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(°Åðúÿÿÿÿ8®Û”Ž¨-
+wsquid:UselessImportCheck
+"GRemove this unused import 'com.softaai.mvvmcode.model.ArticleResponse'.(Ð¢Ì®úÿÿÿÿ8æñŽã™-

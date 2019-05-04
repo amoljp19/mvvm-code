@@ -5,19 +5,20 @@ import android.os.Bundle;
 import com.softaai.mvvmcode.R;
 import com.softaai.mvvmcode.adapter.ArticleItemAdapter;
 import com.softaai.mvvmcode.databinding.ActivityMainBinding;
-import com.softaai.mvvmcode.model.ArticleResponse;
+import com.softaai.mvvmcode.di.MvvmCodeApp;
 import com.softaai.mvvmcode.model.Results;
 import com.softaai.mvvmcode.viewmodel.MainListViewModel;
 
 import java.util.List;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import javax.inject.Inject;
 
 /**
  * Created by Amol Pawar on 20-03-2019.
@@ -27,7 +28,8 @@ public class MainListAcivity extends AppCompatActivity {
 
 
     private ActivityMainBinding activityMainBinding;
-    private MainListViewModel mainListViewModel;
+    @Inject
+    public MainListViewModel mainListViewModel;
     ArticleItemAdapter adapter;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,8 @@ public class MainListAcivity extends AppCompatActivity {
     private void initDataBinding() {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         //mainListViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
-        mainListViewModel = new MainListViewModel();
+//        mainListViewModel = new MainListViewModel();
+        MvvmCodeApp.getComponent().inject(this);
         activityMainBinding.setMainListViewModel(mainListViewModel);
     }
 
